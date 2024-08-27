@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo4j Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/neovis.js@2.0.2"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Neo4j Visualization</h1>
+        <div class="search-container">
+            <select id="searchLabel">
+                <option value="Person">Person</option>
+                <option value="Movie">Movie</option>
+                <option value="User">User</option>
+                <option value="Director">Director</option>
+                <option value="Actor">Actor</option>
+                <option value="Genre">Genre</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Enter name...">
+            <button onclick="searchNode()">Search</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="filters">
+            <h3>Filter by Node Label</h3>
+            <button onclick="filterNodes('Person')">Person</button>
+            <button onclick="filterNodes('Movie')">Movie</button>
+            <button onclick="filterNodes('User')">User</button>
+            <button onclick="filterNodes('Director')">Director</button>
+            <button onclick="filterNodes('Actor')">Actor</button>
+            <button onclick="filterNodes('Genre')">Genre</button>
+
+            <h3>Filter by Relationship Type</h3>
+            <button onclick="filterRelationships('ACTED_IN')">ACTED_IN</button>
+            <button onclick="filterRelationships('DIRECTED')">DIRECTED</button>
+            <button onclick="filterRelationships('IN_GENRE')">IN_GENRE</button>
+            <button onclick="filterRelationships('RATED')">RATED</button>
+
+            <h3>Node Limit</h3>
+            <input type="number" id="nodeLimit" value="100" min="1" max="1000">
+
+            <h3>Actions</h3>
+            <button onclick="resetVisualization()">Reset</button>
+            <button onclick="stabilizeGraph()">Stabilize</button> <!-- Added Stabilize Button -->
+        </div>
+
+        <div id="viz"></div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Neo4j Visualization</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
