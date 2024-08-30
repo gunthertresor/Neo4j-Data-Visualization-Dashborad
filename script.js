@@ -186,7 +186,7 @@ function searchNode() {
     // Construct the Cypher query
     const query = `
         MATCH (n:${label})-[r]-(m)
-        WHERE n.name = "${name}" OR n.title = "${name}"
+        WHERE toLower(n.name)  = "${name}" OR toLower(n.title) = "${name}"
         RETURN n, r, m
         LIMIT ${nodeLimit}
     `;
