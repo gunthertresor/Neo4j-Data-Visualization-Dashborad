@@ -176,7 +176,7 @@ function resetVisualization() {
 function searchNode() {
     const nodeLimit = document.getElementById("nodeLimit").value;
     const label = document.getElementById("searchLabel").value;
-    const name = document.getElementById("searchInput").value.trim();
+    const name = document.getElementById("searchInput").value.trim().toLowerCase();
 
     if (name === "") {
         alert("Please enter a name to search.");
