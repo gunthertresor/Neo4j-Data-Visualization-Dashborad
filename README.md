@@ -24,5 +24,5 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository** to your local machine:
    ```bash
-   git clone git@github.com:your-username/your-repository-name.git
+   git@github.com:gunthertresor/Neo4j-Data-Visualization-Dashborad.git
   
