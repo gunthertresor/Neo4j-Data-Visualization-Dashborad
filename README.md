@@ -1,6 +1,8 @@
 # Neo4j Visualization Project
 
 This project is a web-based tool that allows users to visualize and interact with graph data stored in a Neo4j database. The application is built using HTML, CSS, JavaScript, and Neovis.js, and it provides features for filtering nodes and relationships, searching for specific nodes, and stabilizing the graph's layout.
+#### Database:
+neo4j-graph-examples / recommendations version 5.22.0 or 5.23.0
 
 ## Features
 
