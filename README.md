@@ -71,11 +71,10 @@ YIELD centralityDistribution;
 #### Step 6: Verify the Results:
 ```
 MATCH (n)
-WHERE exists(n.pagerank) OR exists(n.community) OR exists(n.betweenness)
+WHERE n.pagerank IS NOT NULL OR n.community IS NOT NULL OR n.betweenness IS NOT NULL
 RETURN n.name, n.pagerank, n.community, n.betweenness
 ORDER BY n.pagerank DESC
 LIMIT 10;
-
 ```
 #### Step 7: Visualize the Results with Neovis.js:
 Now that you have these properties stored in your database, you can use them in your Neovis.js visualizations. For example, you might use the `pagerank` score to size your nodes, or color nodes based on their `community`.
