@@ -19,7 +19,7 @@ neo4j-graph-examples / recommendations version 5.22.0 or 5.23.0
 - **PageRank**.
 - **Betweenness**.
 
-To add these algorithms to your Neo4j dataset, you'll need to use the Neo4j Graph Data Science (GDS) library. Below are the steps to apply PageRank, Louvain (Community Detection), Betweenness Centrality, and Jaccard Similarity to your dataset. I'll guide you through how to project your data into a graph, run these algorithms, and store the results in your Neo4j database.
+To add these algorithms to your Neo4j dataset, you'll need to use the Neo4j Graph Data Science (GDS) library. Below are the steps to apply PageRank, Louvain (Community Detection), Betweenness Centrality to your dataset. I'll guide you through how to project your data into a graph, run these algorithms, and store the results in your Neo4j database.
 
 #### Step 1: Ensure the GDS Library is Installed: 
 ```
